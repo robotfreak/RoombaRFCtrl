@@ -1,0 +1,572 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>PcapDotNet.Base</name>
+    </assembly>
+    <members>
+        <member name="T:PcapDotNet.Base.UInt24">
+            <summary>
+            A 24 bit unsigned integer.
+            </summary>
+        </member>
+        <member name="F:PcapDotNet.Base.UInt24.SizeOf">
+            <summary>
+            The number of bytes this type will take.
+            </summary>
+        </member>
+        <member name="F:PcapDotNet.Base.UInt24.MaxValue">
+            <summary>
+            The maximum value of this type.
+            </summary>
+        </member>
+        <member name="M:PcapDotNet.Base.UInt24.op_Explicit(System.Int32)~PcapDotNet.Base.UInt24">
+            <summary>
+            Converts a 32 bit signed integer to a 24 bit unsigned integer by taking the 24 least significant bits.
+            </summary>
+            <param name="value">The 32 bit value to convert.</param>
+            <returns>The 24 bit value created by taking the 24 least significant bits of the 32 bit value.</returns>
+        </member>
+        <member name="M:PcapDotNet.Base.UInt24.op_Implicit(PcapDotNet.Base.UInt24)~System.Int32">
+            <summary>
+            Converts the 24 bits unsigned integer to a 32 bits signed integer.
+            </summary>
+            <param name="value">The 24 bit value to convert.</param>
+            <returns>The 32 bit value converted from the 24 bit value.</returns>
+        </member>
+        <member name="M:PcapDotNet.Base.UInt24.Equals(PcapDotNet.Base.UInt24)">
+            <summary>
+            Returns true iff the two values represent the same value.
+            </summary>
+            <param name="other">The value to compare to.</param>
+            <returns>True iff the two values represent the same value.</returns>
+        </member>
+        <member name="M:PcapDotNet.Base.UInt24.Equals(System.Object)">
+            <summary>
+            Indicates whether this instance and a specified object are equal.
+            </summary>
+            <returns>
+            true if <paramref name="obj"/> and this instance are the same type and represent the same value; otherwise, false.
+            </returns>
+            <param name="obj">Another object to compare to. </param><filterpriority>2</filterpriority>
+        </member>
+        <member name="M:PcapDotNet.Base.UInt24.op_Equality(PcapDotNet.Base.UInt24,PcapDotNet.Base.UInt24)">
+            <summary>
+            Returns true iff the two values represent the same value.
+            </summary>
+            <param name="value1">The first value to compare.</param>
+            <param name="value2">The second value to compare.</param>
+            <returns>True iff the two values represent the same value.</returns>
+        </member>
+        <member name="M:PcapDotNet.Base.UInt24.op_Inequality(PcapDotNet.Base.UInt24,PcapDotNet.Base.UInt24)">
+            <summary>
+            Returns true iff the two values represent different values.
+            </summary>
+            <param name="value1">The first value to compare.</param>
+            <param name="value2">The second value to compare.</param>
+            <returns>True iff the two values represent different values.</returns>
+        </member>
+        <member name="M:PcapDotNet.Base.UInt24.GetHashCode">
+            <summary>
+            Returns the hash code for this instance.
+            </summary>
+            <returns>
+            A 32-bit signed integer that is the hash code for this instance.
+            </returns>
+            <filterpriority>2</filterpriority>
+        </member>
+        <member name="M:PcapDotNet.Base.UInt24.ToString">
+            <summary>
+            Returns the fully qualified type name of this instance.
+            </summary>
+            <returns>
+            A <see cref="T:System.String"/> containing a fully qualified type name.
+            </returns>
+            <filterpriority>2</filterpriority>
+        </member>
+        <member name="T:PcapDotNet.Base.IEnumerableExtensions">
+            <summary>
+            Extension methods for IEnumerable of type T.
+            </summary>
+        </member>
+        <member name="M:PcapDotNet.Base.IEnumerableExtensions.IsEmpty``1(System.Collections.Generic.IEnumerable{``0})">
+            <summary>
+            True iff the sequence has no elements.
+            </summary>
+        </member>
+        <member name="M:PcapDotNet.Base.IEnumerableExtensions.Concat``1(System.Collections.Generic.IEnumerable{``0},``0[])">
+            <summary>
+            Concatenates a sequence with more values.
+            </summary>
+            <typeparam name="T">The type of an element in the sequence.</typeparam>
+            <param name="sequence">The sequence to concatenate.</param>
+            <param name="values">The values that will be concatenated with the sequence.</param>
+            <returns>A sequence containing all the original sequence elements cocatenated with values elements.</returns>
+        </member>
+        <member name="M:PcapDotNet.Base.IEnumerableExtensions.SequenceToString``1(System.Collections.Generic.IEnumerable{``0},System.String,System.String,System.String)">
+            <summary>
+            Converts a sequence to a string by converting each element to a string.
+            </summary>
+            <typeparam name="T">The type of an element in the sequence.</typeparam>
+            <param name="sequence">The sequence with the elements to translate to string.</param>
+            <param name="separator">A separator between the elements.</param>
+            <param name="prefix">Prefix to the entire string.</param>
+            <param name="suffix">Suffix to the entire string.</param>
+            <returns>A string of all the elements.</returns>
+        </member>
+        <member name="M:PcapDotNet.Base.IEnumerableExtensions.SequenceToString``1(System.Collections.Generic.IEnumerable{``0},System.String,System.String)">
+            <summary>
+            Converts a sequence to a string by converting each element to a string.
+            </summary>
+            <typeparam name="T">The type of an element in the sequence.</typeparam>
+            <param name="sequence">The sequence with the elements to translate to string.</param>
+            <param name="separator">A separator between the elements.</param>
+            <param name="prefix">Prefix to the entire string.</param>
+            <returns>A string of all the elements.</returns>
+        </member>
+        <member name="M:PcapDotNet.Base.IEnumerableExtensions.SequenceToString``1(System.Collections.Generic.IEnumerable{``0},System.String)">
+            <summary>
+            Converts a sequence to a string by converting each element to a string.
+            </summary>
+            <typeparam name="T">The type of an element in the sequence.</typeparam>
+            <param name="sequence">The sequence with the elements to translate to string.</param>
+            <param name="separator">A separator between the elements.</param>
+            <returns>A string of all the elements.</returns>
+        </member>
+        <member name="M:PcapDotNet.Base.IEnumerableExtensions.SequenceToString``1(System.Collections.Generic.IEnumerable{``0})">
+            <summary>
+            Converts a sequence to a string by converting each element to a string.
+            </summary>
+            <typeparam name="T">The type of an element in the sequence.</typeparam>
+            <param name="sequence">The sequence with the elements to translate to string.</param>
+            <returns>A string of all the elements.</returns>
+        </member>
+        <member name="M:PcapDotNet.Base.IEnumerableExtensions.BytesSequenceToHexadecimalString(System.Collections.Generic.IEnumerable{System.Byte},System.String)">
+            <summary>
+            Returns a string by converting all the bytes to a hexadecimal string.
+            </summary>
+            <param name="sequence">The bytes to convert to a string.</param>
+            <param name="separator">The string to put between every two bytes.</param>
+            <returns>The string resulted by converting all the bytes to hexadecimal strings and putting the separator between them.</returns>
+        </member>
+        <member name="M:PcapDotNet.Base.IEnumerableExtensions.BytesSequenceToHexadecimalString(System.Collections.Generic.IEnumerable{System.Byte})">
+            <summary>
+            Returns a string by converting all the bytes to a hexadecimal string.
+            </summary>
+            <param name="sequence">The bytes to convert to a string.</param>
+            <returns>The string resulted by converting all the bytes to hexadecimal strings.</returns>
+        </member>
+        <member name="M:PcapDotNet.Base.IEnumerableExtensions.SequenceGetHashCode``1(System.Collections.Generic.IEnumerable{``0})">
+            <summary>
+            Creates a hash code by xoring the hash codes of the elements in the sequence.
+            </summary>
+            <typeparam name="T">The type of the elements in the sequence.</typeparam>
+            <param name="sequence">The sequence with the elements to create the hash code for.</param>
+            <returns>The hash code created by xoring all the hash codes of the elements in the sequence.</returns>
+        </member>
+        <member name="M:PcapDotNet.Base.IEnumerableExtensions.BytesSequenceGetHashCode(System.Collections.Generic.IEnumerable{System.Byte})">
+            <summary>
+            Returns a hash code by xoring all the bytes.
+            Each byte is xored with the next 8 bits of the integer.
+            </summary>
+            <param name="sequence">The bytes to xor.</param>
+            <returns>The hash code resulted by xoring all the bytes.</returns>
+        </member>
+        <member name="M:PcapDotNet.Base.IEnumerableExtensions.Count``1(System.Collections.Generic.IEnumerable{``0},``0)">
+            <summary>
+            Counts the number of types the given value is contained in the given sequence.
+            </summary>
+            <typeparam name="T">The type of the elements in the sequence.</typeparam>
+            <param name="sequence">The sequence to look for the value in.</param>
+            <param name="value">The value to look for in the sequence.</param>
+            <returns>The number of types the given value is contained in the given sequence.</returns>
+        </member>
+        <member name="T:PcapDotNet.Base.TypeExtensions">
+            <summary>
+            Extension methods for Type.
+            </summary>
+        </member>
+        <member name="M:PcapDotNet.Base.TypeExtensions.GetEnumValues``1(System.Type)">
+            <summary>
+            Returns all the possible values for the given enum type.
+            </summary>
+        </member>
+        <member name="T:PcapDotNet.Base.MemberInfoExtensions">
+            <summary>
+            Extension methods for MemberInfo.
+            </summary>
+        </member>
+        <member name="M:PcapDotNet.Base.MemberInfoExtensions.GetCustomAttributes``1(System.Reflection.MemberInfo,System.Boolean)">
+            <summary>
+            When overridden in a derived class, returns a sequence of custom attributes identified by System.Type.
+            </summary>
+            <typeparam name="T">TThe type of attribute to search for. Only attributes that are assignable to this type are returned.</typeparam>
+            <param name="memberInfo">The memberInfo to look the attributes on.</param>
+            <param name="inherit">Specifies whether to search this member's inheritance chain to find the attributes.</param>
+            <returns>A sequence of custom attributes applied to this member, or a sequence with zero (0) elements if no attributes have been applied.</returns>
+        </member>
+        <member name="T:PcapDotNet.Base.IListExtensions">
+            <summary>
+            Extension methods for IList of type T.
+            </summary>
+        </member>
+        <member name="M:PcapDotNet.Base.IListExtensions.AsReadOnly``1(System.Collections.Generic.IList{``0})">
+            <summary>
+            Wraps a list with a ReadOnlyCollection.
+            </summary>
+            <typeparam name="T">The type of an element in the collection.</typeparam>
+            <param name="list">The list to wrap in a ReadOnlyCollection.</param>
+            <returns></returns>
+        </member>
+        <member name="T:PcapDotNet.Base.Tuple`2">
+            <summary>
+            A tuple of two values.
+            </summary>
+            <typeparam name="TValue1">The type of the first value.</typeparam>
+            <typeparam name="TValue2">The type of the second value.</typeparam>
+        </member>
+        <member name="M:PcapDotNet.Base.Tuple`2.#ctor(`0,`1)">
+            <summary>
+            Constructs a tuple from two values.
+            </summary>
+            <param name="value1">The first value.</param>
+            <param name="value2">The second value.</param>
+        </member>
+        <member name="M:PcapDotNet.Base.Tuple`2.Equals(PcapDotNet.Base.Tuple{`0,`1})">
+            <summary>
+            Tuples are equal if all their values are equal.
+            </summary>
+        </member>
+        <member name="M:PcapDotNet.Base.Tuple`2.Equals(System.Object)">
+            <summary>
+            Tuples are equal if all their values are equal.
+            </summary>
+        </member>
+        <member name="M:PcapDotNet.Base.Tuple`2.op_Equality(PcapDotNet.Base.Tuple{`0,`1},PcapDotNet.Base.Tuple{`0,`1})">
+            <summary>
+            Tuples are equal if all their values are equal.
+            </summary>
+        </member>
+        <member name="M:PcapDotNet.Base.Tuple`2.op_Inequality(PcapDotNet.Base.Tuple{`0,`1},PcapDotNet.Base.Tuple{`0,`1})">
+            <summary>
+            Tuples are equal if all their values are equal.
+            </summary>
+        </member>
+        <member name="M:PcapDotNet.Base.Tuple`2.GetHashCode">
+            <summary>
+            A hash code for a tuple is a xor its values.
+            </summary>
+        </member>
+        <member name="P:PcapDotNet.Base.Tuple`2.Value1">
+            <summary>
+            The first value.
+            </summary>
+        </member>
+        <member name="P:PcapDotNet.Base.Tuple`2.Value2">
+            <summary>
+            The second value.
+            </summary>
+        </member>
+        <member name="T:PcapDotNet.Base.PropertyInfoExtensions">
+            <summary>
+            Extension methods for PropertyInfo.
+            </summary>
+        </member>
+        <member name="M:PcapDotNet.Base.PropertyInfoExtensions.GetValue(System.Reflection.PropertyInfo,System.Object)">
+            <summary>
+            Returns the value of the given instance's non-indexed property.
+            </summary>
+        </member>
+        <member name="T:PcapDotNet.Base.UInt128">
+            <summary>
+            A 128 bit unsigned integer.
+            </summary>
+        </member>
+        <member name="F:PcapDotNet.Base.UInt128.SizeOf">
+            <summary>
+            The number of bytes this type will take.
+            </summary>
+        </member>
+        <member name="F:PcapDotNet.Base.UInt128.MaxValue">
+            <summary>
+            The maximum value of this type.
+            </summary>
+        </member>
+        <member name="F:PcapDotNet.Base.UInt128.Zero">
+            <summary>
+            A Zero UInt128 value.
+            The minimum UInt128 value.
+            </summary>
+        </member>
+        <member name="M:PcapDotNet.Base.UInt128.#ctor(System.UInt64,System.UInt64)">
+            <summary>
+            Creates a value using two 64 bit values.
+            </summary>
+            <param name="mostSignificant">The most significant 64 bits of the value.</param>
+            <param name="leastSignificant">The least significant 64 bits of the value.</param>
+        </member>
+        <member name="M:PcapDotNet.Base.UInt128.Parse(System.String,System.Globalization.NumberStyles,System.IFormatProvider)">
+            <summary>
+            Converts the string representation of a number in a specified style to its 128-bit unsigned integer equivalent.
+            </summary>
+            <param name="value">A string representing the number to convert.</param>
+            <param name="style">
+            A bitwise combination of NumberStyles values that indicates the permitted format of value.
+            A typical value to specify is NumberStyles.Integer.
+            </param>
+            <param name="provider">An System.IFormatProvider that supplies culture-specific formatting information about value.</param>
+            <returns>A 128-bit unsigned integer equivalent to the number specified in s.</returns>
+        </member>
+        <member name="M:PcapDotNet.Base.UInt128.op_Implicit(System.UInt64)~PcapDotNet.Base.UInt128">
+            <summary>
+            Converts a 64 bit unsigned integer to a 128 bit unsigned integer by taking all the 64 bits.
+            </summary>
+            <param name="value">The 64 bit value to convert.</param>
+            <returns>The 128 bit value created by taking all the 64 bits of the 64 bit value.</returns>
+        </member>
+        <member name="M:PcapDotNet.Base.UInt128.op_Explicit(PcapDotNet.Base.UInt128)~System.UInt64">
+            <summary>
+            Converts the 128 bits unsigned integer to a 64 bits unsigned integer.
+            </summary>
+            <param name="value">The 128 bit value to convert.</param>
+            <returns>The 64 bit value converted from the 128 bit value.</returns>
+        </member>
+        <member name="M:PcapDotNet.Base.UInt128.Equals(PcapDotNet.Base.UInt128)">
+            <summary>
+            Returns true iff the two values represent the same value.
+            </summary>
+            <param name="other">The value to compare to.</param>
+            <returns>True iff the two values represent the same value.</returns>
+        </member>
+        <member name="M:PcapDotNet.Base.UInt128.Equals(System.Object)">
+            <summary>
+            Indicates whether this instance and a specified object are equal.
+            </summary>
+            <returns>
+            true if <paramref name="obj"/> and this instance are the same type and represent the same value; otherwise, false.
+            </returns>
+            <param name="obj">Another object to compare to. </param><filterpriority>2</filterpriority>
+        </member>
+        <member name="M:PcapDotNet.Base.UInt128.op_Equality(PcapDotNet.Base.UInt128,PcapDotNet.Base.UInt128)">
+            <summary>
+            Returns true iff the two values represent the same value.
+            </summary>
+            <param name="value1">The first value to compare.</param>
+            <param name="value2">The second value to compare.</param>
+            <returns>True iff the two values represent the same value.</returns>
+        </member>
+        <member name="M:PcapDotNet.Base.UInt128.op_Inequality(PcapDotNet.Base.UInt128,PcapDotNet.Base.UInt128)">
+            <summary>
+            Returns true iff the two values represent different values.
+            </summary>
+            <param name="value1">The first value to compare.</param>
+            <param name="value2">The second value to compare.</param>
+            <returns>True iff the two values represent different values.</returns>
+        </member>
+        <member name="M:PcapDotNet.Base.UInt128.op_RightShift(PcapDotNet.Base.UInt128,System.Int32)">
+            <summary>
+            Shifts its first operand right by the number of bits specified by its second operand.
+            </summary>
+            <param name="value">The value to shift.</param>
+            <param name="numberOfBits">The number of bits to shift.</param>
+            <returns>The value after it was shifted by the given number of bits.</returns>
+        </member>
+        <member name="M:PcapDotNet.Base.UInt128.RightShift(PcapDotNet.Base.UInt128,System.Int32)">
+            <summary>
+            Shifts its first operand right by the number of bits specified by its second operand.
+            </summary>
+            <param name="value">The value to shift.</param>
+            <param name="numberOfBits">The number of bits to shift.</param>
+            <returns>The value after it was shifted by the given number of bits.</returns>
+        </member>
+        <member name="M:PcapDotNet.Base.UInt128.op_BitwiseAnd(PcapDotNet.Base.UInt128,PcapDotNet.Base.UInt128)">
+            <summary>
+            Bitwise ands between two values.
+            </summary>
+            <param name="value1">The first value to do bitwise and.</param>
+            <param name="value2">The second value to do bitwise and.</param>
+            <returns>The two values after they were bitwise anded.</returns>
+        </member>
+        <member name="M:PcapDotNet.Base.UInt128.BitwiseAnd(PcapDotNet.Base.UInt128,PcapDotNet.Base.UInt128)">
+            <summary>
+            Bitwise ands between two values.
+            </summary>
+            <param name="value1">The first value to do bitwise and.</param>
+            <param name="value2">The second value to do bitwise and.</param>
+            <returns>The two values after they were bitwise anded.</returns>
+        </member>
+        <member name="M:PcapDotNet.Base.UInt128.GetHashCode">
+            <summary>
+            Returns the hash code for this instance.
+            </summary>
+            <returns>
+            A 32-bit signed integer that is the hash code for this instance.
+            </returns>
+            <filterpriority>2</filterpriority>
+        </member>
+        <member name="M:PcapDotNet.Base.UInt128.ToString(System.String)">
+            <summary>
+            Returns the hexadecimal string representation of the 128 bits unsigned integer.
+            </summary>
+        </member>
+        <member name="M:PcapDotNet.Base.UInt128.ToString">
+            <summary>
+            Currently not supported since only X32 string format is supported (and not decimal).
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:PcapDotNet.Base.TimeSpanExtensions">
+            <summary>
+            Extension methods for TimeSpan.
+            </summary>
+        </member>
+        <member name="M:PcapDotNet.Base.TimeSpanExtensions.Divide(System.TimeSpan,System.Double)">
+            <summary>
+            Divides the TimeSpan by a given value.
+            </summary>
+            <param name="timeSpan">The TimeSpan to divide.</param>
+            <param name="value">The value to divide the TimeSpan by.</param>
+            <returns>A TimeSpan value equals to the given TimeSpan divided by the given value.</returns>
+        </member>
+        <member name="M:PcapDotNet.Base.TimeSpanExtensions.Multiply(System.TimeSpan,System.Double)">
+            <summary>
+            Multiplies the TimeSpan by a given value.
+            </summary>
+            <param name="timeSpan">The TimeSpan to multiply.</param>
+            <param name="value">The value to multiply the TimeSpan by.</param>
+            <returns>A TimeSpan value equals to the given TimeSpan multiplied by the given value.</returns>
+        </member>
+        <member name="T:PcapDotNet.Base.UInt48">
+            <summary>
+            A 48 bit unsigned integer.
+            </summary>
+        </member>
+        <member name="F:PcapDotNet.Base.UInt48.SizeOf">
+            <summary>
+            The number of bytes this type will take.
+            </summary>
+        </member>
+        <member name="F:PcapDotNet.Base.UInt48.MaxValue">
+            <summary>
+            The maximum value of this type.
+            </summary>
+        </member>
+        <member name="M:PcapDotNet.Base.UInt48.Parse(System.String,System.Globalization.NumberStyles,System.IFormatProvider)">
+            <summary>
+            Converts the string representation of a number in a specified style to its 48-bit unsigned integer equivalent.
+            </summary>
+            <param name="value">A string representing the number to convert.</param>
+            <param name="style">
+            A bitwise combination of NumberStyles values that indicates the permitted format of value. 
+            A typical value to specify is NumberStyles.Integer.
+            </param>
+            <param name="provider">An System.IFormatProvider that supplies culture-specific formatting information about value.</param>
+            <returns>A 48-bit unsigned integer equivalent to the number specified in s.</returns>
+        </member>
+        <member name="M:PcapDotNet.Base.UInt48.op_Implicit(System.UInt32)~PcapDotNet.Base.UInt48">
+            <summary>
+            Converts a 32 bit unsigned integer to a 48 bit unsigned integer by taking all the 32 bits.
+            </summary>
+            <param name="value">The 32 bit value to convert.</param>
+            <returns>The 48 bit value created by taking all the 32 bits of the 32bit value.</returns>
+        </member>
+        <member name="M:PcapDotNet.Base.UInt48.op_Explicit(System.Int64)~PcapDotNet.Base.UInt48">
+            <summary>
+            Converts a 64 bit signed integer to a 48 bit unsigned integer by taking the 48 least significant bits.
+            </summary>
+            <param name="value">The 64 bit value to convert.</param>
+            <returns>The 48 bit value created by taking the 48 least significant bits of the 64 bit value.</returns>
+        </member>
+        <member name="M:PcapDotNet.Base.UInt48.op_Explicit(System.UInt64)~PcapDotNet.Base.UInt48">
+            <summary>
+            Converts a 64 bit unsigned integer to a 48 bit unsigned integer by taking the 48 least significant bits.
+            </summary>
+            <param name="value">The 64 bit value to convert.</param>
+            <returns>The 48 bit value created by taking the 48 least significant bits of the 64 bit value.</returns>
+        </member>
+        <member name="M:PcapDotNet.Base.UInt48.op_Implicit(PcapDotNet.Base.UInt48)~System.Int64">
+            <summary>
+            Converts the 48 bits unsigned integer to a 64 bits signed integer.
+            </summary>
+            <param name="value">The 48 bit value to convert.</param>
+            <returns>The 64 bit value converted from the 48 bit value.</returns>
+        </member>
+        <member name="M:PcapDotNet.Base.UInt48.op_Implicit(PcapDotNet.Base.UInt48)~System.UInt64">
+            <summary>
+            Converts the 48 bits unsigned integer to a 64 bits unsigned integer.
+            </summary>
+            <param name="value">The 48 bit value to convert.</param>
+            <returns>The 64 bit value converted from the 48 bit value.</returns>
+        </member>
+        <member name="M:PcapDotNet.Base.UInt48.op_Explicit(PcapDotNet.Base.UInt48)~System.Byte">
+            <summary>
+            Converts the 48 bits unsigned integer to an 8 bits unsigned integer.
+            </summary>
+            <param name="value">The 48 bit value to convert.</param>
+            <returns>The 8 bit value converted from the 48 bit value.</returns>
+        </member>
+        <member name="M:PcapDotNet.Base.UInt48.Equals(PcapDotNet.Base.UInt48)">
+            <summary>
+            Returns true iff the two values represent the same value.
+            </summary>
+            <param name="other">The value to compare to.</param>
+            <returns>True iff the two values represent the same value.</returns>
+        </member>
+        <member name="M:PcapDotNet.Base.UInt48.Equals(System.Object)">
+            <summary>
+            Indicates whether this instance and a specified object are equal.
+            </summary>
+            <returns>
+            true if <paramref name="obj"/> and this instance are the same type and represent the same value; otherwise, false.
+            </returns>
+            <param name="obj">Another object to compare to. </param><filterpriority>2</filterpriority>
+        </member>
+        <member name="M:PcapDotNet.Base.UInt48.op_Equality(PcapDotNet.Base.UInt48,PcapDotNet.Base.UInt48)">
+            <summary>
+            Returns true iff the two values represent the same value.
+            </summary>
+            <param name="value1">The first value to compare.</param>
+            <param name="value2">The second value to compare.</param>
+            <returns>True iff the two values represent the same value.</returns>
+        </member>
+        <member name="M:PcapDotNet.Base.UInt48.op_Inequality(PcapDotNet.Base.UInt48,PcapDotNet.Base.UInt48)">
+            <summary>
+            Returns true iff the two values represent different values.
+            </summary>
+            <param name="value1">The first value to compare.</param>
+            <param name="value2">The second value to compare.</param>
+            <returns>True iff the two values represent different values.</returns>
+        </member>
+        <member name="M:PcapDotNet.Base.UInt48.GetHashCode">
+            <summary>
+            Returns the hash code for this instance.
+            </summary>
+            <returns>
+            A 32-bit signed integer that is the hash code for this instance.
+            </returns>
+            <filterpriority>2</filterpriority>
+        </member>
+        <member name="M:PcapDotNet.Base.UInt48.ToString">
+            <summary>
+            Returns the fully qualified type name of this instance.
+            </summary>
+            <returns>
+            A <see cref="T:System.String"/> containing a fully qualified type name.
+            </returns>
+            <filterpriority>2</filterpriority>
+        </member>
+        <member name="T:PcapDotNet.Base.FuncExtensions">
+            <summary>
+            Extension methods for Func of type T.
+            </summary>
+        </member>
+        <member name="M:PcapDotNet.Base.FuncExtensions.GenerateArray``1(System.Func{``0},System.Int32)">
+            <summary>
+            Generates an array of a given size by generating elements using the given delegate.
+            </summary>
+            <typeparam name="T">The type of the array to create.</typeparam>
+            <param name="generator">The delegate to generate elements with.</param>
+            <param name="size">The size of the array to create.</param>
+            <returns>An array of a given size with elements generated by the given delegate.</returns>
+        </member>
+    </members>
+</doc>
